@@ -1,19 +1,22 @@
-# claude-iba-governor
+# iba-governor
 
-**Full production governance for Claude Code.**
+**Full production governance for any agent.**
 
-Thin IBA layer on top of claude-mem (or any memory plugin).
+Thin IBA layer that adds cryptographic intent binding on top of any memory plugin or agent framework.
 
-One-command install. Zero new dependencies. <5 ms overhead. Preserves 95%+ token savings.
+One-command install. Zero new dependencies. <5 ms overhead.
 
 ## Features
 - Cryptographic intent binding on every session
-- Real-time enforcement before tool calls / memory writes
-- Zero-drift protection + audit trail
-- Works with claude-mem, claude-brain, etc.
-- Team-ready (.iba.yaml config)
+- Real-time enforcement before tool calls or memory writes
+- Zero-drift protection + immutable audit trail
+- Works with any memory plugin or agent system
+- Team-ready configuration (.iba.yaml)
 
-## Quick Install (inside any Claude Code session)
+## Quick Start
 ```bash
-/plugin marketplace add Grokipaedia/claude-iba-governor
-/plugin install claude-iba-governor
+git clone https://github.com/Grokipaedia/iba-governor.git
+cd iba-governor
+pip install -r requirements.txt
+# Run inside your agent environment
+python -m iba_governor
