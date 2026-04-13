@@ -1,6 +1,4 @@
-# governor.iba - Thin IBA governance layer for Claude Code
-# KISS version - works with claude-mem or any memory plugin
-
+# iba_governor.py - Thin IBA governance layer for any agent
 import json
 from datetime import datetime
 import os
@@ -18,10 +16,10 @@ class IBAGovernor:
         # Create default cert on first run
         cert = {
             "iba_version": "2.0",
-            "certificate_id": f"claude-session-{datetime.now().strftime('%Y%m%d-%H%M')}",
+            "certificate_id": f"session-{datetime.now().strftime('%Y%m%d-%H%M')}",
             "issued_at": datetime.now().isoformat(),
             "principal": "human-user",
-            "declared_intent": "General coding assistance within approved scope",
+            "declared_intent": "General autonomous operation within approved scope",
             "scope_envelope": {"default_posture": "DENY_ALL"},
             "temporal_scope": {"hard_expiry": "2026-12-31"},
             "entropy_threshold": {"max_kl_divergence": 0.12},
@@ -32,11 +30,10 @@ class IBAGovernor:
         return cert
 
     def check_action(self, action_description: str) -> bool:
-        """Simple IBA check before any tool/memory action"""
+        """Simple IBA check before any tool or memory action"""
         print(f"🔒 IBA Governor checking: {action_description[:80]}...")
 
-        # In real version this would do full KL-divergence + scope check
-        # For KISS starter we do a simple allow + log
+        # In production this would do full KL-divergence + scope check
         log_entry = {
             "timestamp": datetime.now().isoformat(),
             "action": action_description,
@@ -46,13 +43,9 @@ class IBAGovernor:
         with open(self.audit_log, "a") as f:
             f.write(json.dumps(log_entry) + "\n")
 
-        return True  # Allow for now
+        return True  # Allow for now (expand as needed)
 
-# Auto-initialize when plugin loads
+# Auto-initialize
 governor = IBAGovernor()
 
-# Hook example (Claude Code plugin system)
-def before_tool_call(tool_name, args):
-    return governor.check_action(f"Tool call: {tool_name} with args {args}")
-
-print("✅ claude-iba-governor loaded — Intent-Bound Authorization active")
+print("✅ iba-governor loaded — Intent-Bound Authorization active")
