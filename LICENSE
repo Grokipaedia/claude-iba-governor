@@ -1,21 +1,36 @@
-MIT License
+Copyright (c) 2026 Jeffrey Williams · IntentBound.com · IBA@intentbound.com
 
-Copyright (c) 2026 Grokipaedia
+INTENT BOUND AUTHORIZATION — PROPRIETARY LICENSE
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Patent GB2603013.0 (Pending) · UK IPO · Filed February 5, 2026
+PCT Coverage: 150+ Countries · Protected Until August 2028
+IETF draft-williams-intent-token-00
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+All rights reserved.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This repository and its contents — including but not limited to all
+source code, documentation, architecture specifications, diagrams,
+demonstration materials, and README files — are the proprietary
+intellectual property of Jeffrey Williams and are protected by:
+
+  · UK patent application GB2603013.0 (pending, filed February 5, 2026)
+  · PCT international patent coverage in 150+ countries
+  · Copyright law in all applicable jurisdictions
+
+PERMITTED:
+  · Viewing and reading this repository for evaluation purposes
+  · Linking to this repository for reference or citation
+  · Referencing this repository in academic, journalistic, or
+    standards-body contexts with attribution
+
+NOT PERMITTED without express written authorisation from Jeffrey Williams:
+  · Copying, reproducing, or distributing any part of this repository
+  · Implementing or deploying the IBA architecture or any substantial
+    part of it in any product, service, or system
+  · Creating derivative works based on this repository
+  · Using this repository or its contents for commercial purposes
+  · Filing patent applications that overlap with the claims of
+    GB2603013.0 or the PCT application derived from it
+
+ACQUISITION & LICENSING:
+  IBA Intent Bound Authorization is available for acquisitio
