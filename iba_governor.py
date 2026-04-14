@@ -22,7 +22,7 @@ class IBATerminatedError(Exception):
 
 class IBAGovernor:
     """
-    Thin IBA enforcement layer.
+    Thin IBA enforcement layer for any agent framework or memory plugin.
     Reads .iba.yaml, validates every action against declared scope,
     blocks out-of-scope actions, terminates on kill threshold.
     Writes immutable audit chain to iba-audit.jsonl.
@@ -206,7 +206,6 @@ if __name__ == "__main__":
 
     # Test scenarios
     scenarios = [
-        # Should ALLOW (in scope)
         ("Research latest AI governance papers", True),
         ("Analyse the codebase structure", True),
         ("Write documentation for the API", True),
