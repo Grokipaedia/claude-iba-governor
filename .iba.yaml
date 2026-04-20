@@ -1,36 +1,85 @@
-# .iba.yaml - IBA Intent Bound Authorization Configuration
-# Patent GB2603013.0 (Pending) · intentbound.com
+# .iba.yaml
+# IBA Intent Bound Authorization — Core Governor Configuration
+# Patent GB2603013.0 (Pending) · UK IPO · Filed February 5, 2026
+# WIPO DAS Confirmed April 15, 2026 · Access Code C9A6
+# IETF draft-williams-intent-token-00 · intentbound.com
+#
+# Default configuration for general agentic AI governance.
+# Copy and extend for domain-specific deployments.
+#
+# Domain configs:
+#   iba-neural-guard     — BCI · github.com/Grokipaedia/iba-neural-guard
+#   iba-blindsight-guard — Vision · github.com/Grokipaedia/iba-blindsight-guard
+#   iba-medical-guard    — Medical AI · github.com/Grokipaedia/iba-medical-guard
+#   iba-social-guard     — Social · github.com/Grokipaedia/iba-social-guard
+#
+# Usage: python iba_governor.py --config .iba.yaml --demo
 
 intent:
-  description: "Research and document AI governance developments. No deployment, no payments, no external APIs."
+  description: >
+    Authorized code development and review within declared repository scope.
+    No production deploys without explicit human sign-off.
+    No external data transmission. No credential access.
+    No payment execution. No database deletion.
+    Human-authorized actions only.
+
+principal:
+  id: "ENGINEER-001"
+  identity_reference: "human-dev-session-2026-04-20"
+  human_authorization: "HUMAN-AUTH-2026-04-20"
+  account_type: "individual_developer"
 
 scope:
-  - research
-  - analysis
-  - coding
-  - documentation
+  - read_file
+  - write_file
+  - run_tests
+  - git_commit
+  - git_push
+  - code_review
+  - refactor
+  - lint
+  - build
+  - debug
+  - search_codebase
+  - read_documentation
 
 denied:
-  - production-deployment
-  - financial-transactions
-  - data-deletion
-  - external-api-calls
-  - secret
+  - production_deploy
+  - delete_database
+  - drop_table
+  - external_data_export
+  - credential_access
+  - payment_execution
+  - send_email_bulk
+  - modify_iam_policy
+  - disable_logging
+  - modify_audit_trail
 
-default_posture: "DENY_ALL"
+default_posture: DENY_ALL
 
-kill_threshold: "production-deployment | financial-transactions | data-deletion"
+# Kill threshold — session terminates immediately on match
+# No human intervention required. No delay.
+kill_threshold: >
+  delete_production |
+  credential_exfiltration |
+  unauthorized_payment |
+  data_breach |
+  capability_override |
+  disable_security |
+  modify_audit_trail
 
 temporal_scope:
   hard_expiry: "2026-12-31"
 
-entropy_threshold:
-  max_kl_divergence: 0.12
-  flag_at: 0.08
-  kill_at: 0.12
-  replan_window_ms: 500
+audit:
+  chain: witnessbound
+  log_every_action: true
+  immutable: true
+  log_path: "iba-audit.jsonl"
 
-team_mode:
-  require_human_review_for:
-    - high-risk-actions
-  audit_level: "full"
+# Expand scope per session by issuing a new signed cert.
+# Silent capability expansion is FORBIDDEN.
+capability_governance:
+  expansion_requires: "new_signed_human_cert"
+  silent_expansion: FORBIDDEN
+  version_lock: true
