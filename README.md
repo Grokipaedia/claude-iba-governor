@@ -208,7 +208,7 @@ Full IBA architecture demonstrated.
 ## Patent & Standards Record
 
 ```
-Patent:   GB2603013.0 (Pending) · UK IPO · Filed February 5, 2026
+Patent:   GB2603013.0 (Pending) · UK IPO · Filed February 10, 2026
 WIPO DAS: Confirmed April 15, 2026 · Access Code C9A6
 PCT:      150+ countries · Protected until August 2028
 IETF:     draft-williams-intent-token-00 · CONFIRMED LIVE
