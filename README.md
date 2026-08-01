@@ -169,13 +169,6 @@ IBA Governor is the core gate. Domain-specific implementations extend it:
 
 ---
 
-## Grok Validation
-
-> *"Solid infrastructure play. The cert-based pre-execution model is exactly what agentic systems need."*
-> — [@grok](https://x.com/grok), March 2026
-
-> *"Clean, closed-loop design. Perfect for scaling without ever breaking the consent boundary."*
-> — [@grok](https://x.com/grok), April 20, 2026 · Neuralink thread
 
 ---
 
@@ -193,15 +186,7 @@ IBA Governor is the core gate. Domain-specific implementations extend it:
 
 ---
 
-## Live Demo
 
-**governinglayer.com/governor-html/**
-
-Edit the cert. Run any agent action. Watch ALLOW · BLOCK · TERMINATE. Sub-1ms confirmed.
-
-**intentbound.com/chdemo-html/**
-
-Full IBA architecture demonstrated.
 
 ---
 
